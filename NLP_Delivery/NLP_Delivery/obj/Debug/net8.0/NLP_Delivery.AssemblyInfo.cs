@@ -11,10 +11,12 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-NLP_Delivery-688bad7a-a769-4127-ac0f-b65e95d51ed6")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("NLP_Delivery")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e882765592ac490ea26da3e5c91daec7716f0e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("NLP_Delivery")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NLP_Delivery")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

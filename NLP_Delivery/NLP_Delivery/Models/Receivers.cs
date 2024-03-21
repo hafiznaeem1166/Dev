@@ -16,7 +16,7 @@ namespace NLP_Delivery.Models
         [StringLength(100)]
         public string ReceiverAddress { get; set; }
        
-        [ForeignKey("RoleID")]
-        public Roles Role { get; set; }
+        //[ForeignKey("RoleID")]
+        //public Roles Role { get; set; }
     }
 }

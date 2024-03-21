@@ -1,6 +1,7 @@
 ﻿using static System.Formats.Asn1.AsnWriter;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Identity;
 
 namespace NLP_Delivery.Models
 {
@@ -21,6 +22,8 @@ namespace NLP_Delivery.Models
         [Required]
         public int ProductID { get; set; }
 
+        public int BadgeID { get; set; }
+
         [Required]
         [DataType(DataType.Date)]
         public DateTime Date { get; set; }
@@ -34,13 +37,18 @@ namespace NLP_Delivery.Models
         public Stores Store { get; set; }
 
         [ForeignKey("UserID")]
-        public Users User { get; set; }
+        public IdentityUser<int> User { get; set; }
 
         [ForeignKey("ReceiverID")]
         public Receivers Receiver { get; set; }
 
         [ForeignKey("ProductID")]
         public Products Product { get; set; }
+
+        [ForeignKey("BadgeID")]
+        public Badges Badge { get; set; }
+
+
 
     }
 }

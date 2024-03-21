@@ -1,27 +1,29 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
+using Microsoft.AspNetCore.Identity;
 
 namespace NLP_Delivery.Models
 {
-    public class Users
+    public class AppUserViewModel
     {
-        [Key]
         public int UserID { get; set; }
 
-        [Required]
-        public int RoleID { get; set; }
+        public string?  UserName { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string Username { get; set; }
 
-        [Required]
-        [StringLength(100)]
         public string Password { get; set; }
 
-        [ForeignKey("RoleID")]
-        public Roles Role { get; set; }
+        
+        public int RoleID { get; set; }
+        
+        
+        public string? PhoneNumber { get; set; }
+
+        
+        public string? Email { get; set; }
+
+        public List<IdentityRole<int>>? AppRoles { get; set; }      
     }
 
 }

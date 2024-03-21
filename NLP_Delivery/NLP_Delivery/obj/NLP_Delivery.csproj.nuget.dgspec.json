@@ -10,11 +10,11 @@
         "projectUniqueName": "D:\\Software\\Dev\\NLP_Delivery\\NLP_Delivery\\NLP_Delivery.csproj",
         "projectName": "NLP_Delivery",
         "projectPath": "D:\\Software\\Dev\\NLP_Delivery\\NLP_Delivery\\NLP_Delivery.csproj",
-        "packagesPath": "C:\\Users\\Naeem\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Aqsa Azam.DESKTOP-Q463SQN\\.nuget\\packages\\",
         "outputPath": "D:\\Software\\Dev\\NLP_Delivery\\NLP_Delivery\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Naeem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Aqsa Azam.DESKTOP-Q463SQN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,23 +45,29 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[8.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[8.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.2, )"
-            },
-            "Neo4jClient.DataAnnotations": {
-              "target": "Package",
-              "version": "[2.3.0, )"
             }
           },
           "imports": [
