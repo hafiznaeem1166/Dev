@@ -1,0 +1,38 @@
+﻿@model List<NLP_Delivery.Models.AppUserViewModel> // Specify the model for the view
+
+<h1>User List</h1>
+
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Phone Number</th>
+                 <th>Role</th> 
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@(user?.Email ?? "N/A")</td>
+                    <td>@(user?.PhoneNumber ?? "N/A")</td>
+                     <td>@(user?.AppRoles)</td> 
+                    <td>
+                        <div class="btn-group" role="group">
+                            @if (user != null)
+                            {
+                                <a href="@Url.Action("Edit", "AppUsers", new { id = user.UserID })" class="btn btn-sm btn-primary">Edit</a>
+                                <form method="post" action="@Url.Action("Delete", "AppUsers", new { id = user.UserID })" onsubmit="return confirm('Are you sure you want to delete this user?')">
+                                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                </form>
+                                <a href="@Url.Action("ReSetPassword", "AppUsers", new { id = user.UserID })" class="btn btn-link">Reset Password</a>
+                            }
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
